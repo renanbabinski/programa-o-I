@@ -1,8 +1,9 @@
 class loop{
 	public static void main(String[] args){
 		int i;
-		for (i=120;i<=280;i++){
-			System.out.println(i);
+		for (i=50;i<=150;i++){
+			if(i%3 == 0)
+				System.out.println(i);
 		}
 	}
 }
