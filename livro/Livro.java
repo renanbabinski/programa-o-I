@@ -5,7 +5,7 @@ public class Livro{
   String isbn;
   Pessoa autor = new Pessoa();
 
-  class Pessoa{
+  class Pessoa{ 
     String nome;
     String email;
     String cpf;
@@ -18,7 +18,7 @@ public class Livro{
     System.out.println("ISBN :" +this.isbn);
     System.out.println("Nome do autor:" +this.autor.nome);
     System.out.println("Email do autor:" +this.autor.email);
-    System.out.println("CPF do autor:" +this.autor.email);
+    System.out.println("CPF do autor:" +this.autor.cpf);
     System.out.println("");
   }
 
