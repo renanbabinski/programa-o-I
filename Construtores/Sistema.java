@@ -9,7 +9,11 @@ public class Sistema{
 		System.out.println(a);
 		
 		a.matricular(d);
-		a.listarDisciplinas();
 		
+		Disciplina c = new Disciplina(50,"Prog III",00);
+		System.out.println(c);
+
+		a.matricular(c);
+        a.listarDisciplinas();
 	}
 }
