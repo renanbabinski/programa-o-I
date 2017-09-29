@@ -14,5 +14,7 @@ public class Funcionario{
 		return "\nFuncionário : "+this.nome+"\nCPF : "+this.cpf+ "\nSalário : "+this.salario+"\n";
 	}
 
-
+	public void contratar(){
+		System.ou.println("")
+	}
 }
