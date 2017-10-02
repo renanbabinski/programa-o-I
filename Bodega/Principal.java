@@ -12,6 +12,7 @@ public class Principal{
    		Scanner scanf = new Scanner(System.in);
    		System.out.println("   ->>>>>  BODEGA DO SEU JOÃOZIN  <<<<<-\n\n");
    		System.out.println("        A MELHOR DO SUL DO PAÍS !!!\n\n");
+   		System.out.println("1--Contratar funcionarios");
    		System.out.println("0--EXIT\n");
    		menu = scanf.nextInt();
    		return menu;
@@ -41,8 +42,10 @@ public class Principal{
 			menu = mostrarMenu();
 			switch(menu){
 				case 1:
+					empresa.contratar();
 					break;
 				case 2:
+
 					break;
 				case 0:
 					break;
@@ -53,15 +56,6 @@ public class Principal{
 
 
 
-
-
-
-
-
-
-		for(Funcionario l : empresa.bodegueiros){
-			System.out.println(l);
-		}
 
 
 

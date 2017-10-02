@@ -1,8 +1,10 @@
-import java.util.List;
+import java.util.Scanner;
 public class Funcionario{
 	String nome;
 	String cpf;
 	double salario;
+
+	Empresa empresa = new Empresa();
 	
 	public Funcionario(String nome,String cpf,double salario){
 		this.nome = nome;
@@ -14,7 +16,8 @@ public class Funcionario{
 		return "\nFuncionário : "+this.nome+"\nCPF : "+this.cpf+ "\nSalário : "+this.salario+"\n";
 	}
 
-	public void contratar(){
-		System.ou.println("")
+	public void ExibirFuncionarios(){
+		for(Funcionario l : empresa.bodegueiros)
+			System.out.println(l);
 	}
 }
