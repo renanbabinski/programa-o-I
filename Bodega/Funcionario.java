@@ -1,10 +1,14 @@
 import java.util.Scanner;
+import java.util.List;
 public class Funcionario{
 	String nome;
 	String cpf;
 	double salario;
 
 	Empresa empresa = new Empresa();
+
+	public Funcionario(){
+	}
 	
 	public Funcionario(String nome,String cpf,double salario){
 		this.nome = nome;

@@ -22,6 +22,7 @@ public class Principal{
 
 	public static void main(String [] args){
 		Empresa empresa = new Empresa();
+		Funcionario funcionario = new Funcionario();
 		Scanner scanf = new Scanner(System.in);
 
 		int menu = 10;
@@ -45,7 +46,7 @@ public class Principal{
 					empresa.contratar();
 					break;
 				case 2:
-
+					funcionario.ExibirFuncionarios();
 					break;
 				case 0:
 					break;
@@ -53,6 +54,9 @@ public class Principal{
 					break;
 			}
 		}while(menu != 0);
+
+		for(Funcionario l : empresa.bodegueiros)
+			System.out.println(l);
 
 
 
