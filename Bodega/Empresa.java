@@ -9,9 +9,6 @@ public class Empresa{
 
 	Scanner scanf = new Scanner(System.in);
 
-
-
-
 	public void contrata(Funcionario x){
 		bodegueiros.add(x);
 	}
@@ -25,6 +22,46 @@ public class Empresa{
 		double salario = scanf.nextDouble();
 		Funcionario a = new Funcionario(nome,cpf,salario);
 		contrata(a);
+	}
+
+	public void ExibirFuncionarios(){
+		int i = 1;
+		for(Funcionario l : bodegueiros){
+			System.out.println("\n->>> "  +i+ "");
+			System.out.println(l);
+			i++;
+		}
+	}
+
+	public void add_bebidas(Bebida x){
+		produtos.add(x);
+	}
+
+	public void cadastrar_bebidas(){
+		System.out.println("Nome da bebida:");
+		String nome = scanf.next();
+		System.out.println("Teor Alcólico:");
+		double teor = scanf.nextDouble();
+		System.out.println("Quantidade (ml):");
+		int quantidade = scanf.nextInt();
+		System.out.println("Preço:");
+		double preco = scanf.nextDouble();
+		System.out.println("Quantidade em estoque:");
+		int estoque = scanf.nextInt();
+		Bebida x = new Bebida(nome,teor,quantidade,preco,estoque);
+		add_bebidas(x);
+	}
+
+	public void ExibirBebidas(int opcao){
+		int i = 1;
+		for(Bebida l : produtos){
+			System.out.println("\n->>> "  +i+ "");
+			if(opcao == 0)
+				System.out.println(l);
+			else
+				System.out.println(l.nome);
+			i++;
+		}
 	}
 
 

@@ -13,30 +13,32 @@ public class Principal{
    		System.out.println("   ->>>>>  BODEGA DO SEU JOÃOZIN  <<<<<-\n\n");
    		System.out.println("        A MELHOR DO SUL DO PAÍS !!!\n\n");
    		System.out.println("1--Contratar funcionarios");
+   		System.out.println("2--Exibir funcionarios");
+   		System.out.println("3--Exibir bebidas a venda");
+   		System.out.println("4--Cadastrar novas bebidas");
+   		System.out.println("5--Vender Bebida");
    		System.out.println("0--EXIT\n");
    		menu = scanf.nextInt();
    		return menu;
+   }
+
+   public static void getchar(){
+   	Scanner scanf = new Scanner(System.in);
+   	System.out.println("\nPressione ENTER para continuar...");
+   	scanf.nextLine();
    }
 
 ////////////////////////////////////////////////
 
 	public static void main(String [] args){
 		Empresa empresa = new Empresa();
-		Funcionario funcionario = new Funcionario();
+		Iniciar iniciar = new Iniciar();
+		Bebida bebida = new Bebida();
 		Scanner scanf = new Scanner(System.in);
 
 		int menu = 10;
-
-		///////////////////////////////
-
-		Funcionario a = new Funcionario("Manoel","085.213.279-43",1000.00);
-		empresa.contrata(a);
-		Funcionario b = new Funcionario("Carlão da Bodega","043.587.945-99",800.00);
-		empresa.contrata(b);
-		Funcionario c = new Funcionario("Antonio","055.214.897-00",500.00);
-		empresa.contrata(c);		
-
-		///////////////////////////////
+		
+		iniciar.init(empresa);
 
 		do{
 			clearScreen();
@@ -46,20 +48,24 @@ public class Principal{
 					empresa.contratar();
 					break;
 				case 2:
-					funcionario.ExibirFuncionarios();
+					empresa.ExibirFuncionarios();
+					getchar();
 					break;
+				case 3:
+					empresa.ExibirBebidas(0);
+					getchar();
+					break;
+				case 4:
+					empresa.cadastrar_bebidas();
+					break;
+				case 5:
+					bebida.vender(empresa);
 				case 0:
 					break;
 				default:
 					break;
 			}
 		}while(menu != 0);
-
-		for(Funcionario l : empresa.bodegueiros)
-			System.out.println(l);
-
-
-
 
 
 

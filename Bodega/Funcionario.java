@@ -5,8 +5,6 @@ public class Funcionario{
 	String cpf;
 	double salario;
 
-	Empresa empresa = new Empresa();
-
 	public Funcionario(){
 	}
 	
@@ -20,8 +18,4 @@ public class Funcionario{
 		return "\nFuncionário : "+this.nome+"\nCPF : "+this.cpf+ "\nSalário : "+this.salario+"\n";
 	}
 
-	public void ExibirFuncionarios(){
-		for(Funcionario l : empresa.bodegueiros)
-			System.out.println(l);
-	}
 }
