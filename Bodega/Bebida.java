@@ -39,7 +39,6 @@ public class Bebida{
 		}
 	}
 
-
 	public void vender(Empresa empresa){
 		int opcao;
 		
@@ -60,14 +59,10 @@ public class Bebida{
 					System.out.println("Não há bebidas no estoque!!!");
 				}
 			}
-
 		}
-
 	}
 
-
-	
-	}
+}
 
 
 

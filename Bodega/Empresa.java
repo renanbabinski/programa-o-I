@@ -10,6 +10,10 @@ public class Empresa{
 
 	Scanner scanf = new Scanner(System.in);
 
+	public String toString(){
+		return "\nNome da empresa : "+this.nomeEmpresa+"\nCNPJ da empresa : "+cnpj;
+	}
+
 	public void contrata(Funcionario x){
 		bodegueiros.add(x);
 	}
@@ -40,7 +44,7 @@ public class Empresa{
 
 	public void cadastrar_bebidas(){
 		System.out.println("Nome da bebida:");
-		String nome = scanf.next();
+		String nome = scanf.nextLine();
 		System.out.println("Teor Alcólico:");
 		double teor = scanf.nextDouble();
 		System.out.println("Quantidade (ml):");
@@ -72,7 +76,7 @@ public class Empresa{
 	public void cadastra_clientes(){
 		boolean fiado;
 		System.out.println("Nome do cliente:");
-		String cliente = scanf.next();
+		String cliente = scanf.nextLine();
 		System.out.println("CPF do cliente (formato XXX.XXX.XXX-XX):");
 		String cpf = scanf.next();
 		System.out.println("Vender fiado?\n1--SIM\n0--NÃO");
@@ -92,8 +96,5 @@ public class Empresa{
 			i++;
 		}
 	}
-
-
-
 }
 

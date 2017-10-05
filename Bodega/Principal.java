@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.List;
 public class Principal{
 
 	public static void clearScreen() {  
@@ -20,6 +19,7 @@ public class Principal{
    		System.out.println("6--Cadastrar novos clientes");
    		System.out.println("7--Mostrar clientes");
    		System.out.println("8--Comprar mais bebidas");
+   		System.out.println("9--Exibir dados da empresa");
    		System.out.println("0--EXIT\n");
    		menu = scanf.nextInt();
    		return menu;
@@ -31,24 +31,24 @@ public class Principal{
    	scanf.nextLine();
    }
 
-////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////   
 
 	public static void main(String [] args){
 		Empresa empresa = new Empresa();
 		Iniciar iniciar = new Iniciar();
 		Bebida bebida = new Bebida();
 		Scanner scanf = new Scanner(System.in);
+		iniciar.init(empresa);
 
 		int menu = 10;
 		
-		iniciar.init(empresa);
-
 		do{
 			clearScreen();
 			menu = mostrarMenu();
 			switch(menu){
 				case 1:
 					empresa.contratar();
+					getchar();
 					break;
 				case 2:
 					empresa.ExibirFuncionarios();
@@ -77,15 +77,16 @@ public class Principal{
 					bebida.comprar(empresa);
 					getchar();
 					break;
+				case 9:
+					System.out.println(empresa);
+					getchar();
 				case 0:
 					break;
 				default:
+					System.out.println("Opção inválida!!");
+					getchar();
 					break;
 			}
 		}while(menu != 0);
-
-
-
 	}
-	
 }

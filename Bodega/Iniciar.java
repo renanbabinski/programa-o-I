@@ -1,6 +1,5 @@
 public class Iniciar{
-
-		
+	
 	public void init(Empresa empresa){
 		Funcionario a = new Funcionario("Manoel","085.213.279-43",1000.00);
 		empresa.contrata(a);
