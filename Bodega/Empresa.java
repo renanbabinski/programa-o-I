@@ -6,6 +6,7 @@ public class Empresa{
 	String cnpj = "56.586.568.0001-68";
 	List<Funcionario> bodegueiros = new ArrayList<>();
 	List<Bebida> produtos = new ArrayList<>();
+	List<Clientes> cachaceiros = new ArrayList<>();
 
 	Scanner scanf = new Scanner(System.in);
 
@@ -15,7 +16,7 @@ public class Empresa{
 
 	public void contratar(){
 		System.out.println("Digite o nome do funcionário:");
-		String nome = scanf.next();
+		String nome = scanf.nextLine();
 		System.out.println("Digite o CPF do funcionário ( FORMATO XXX.XXX.XXX-XX ) ");
 		String cpf = scanf.next();
 		System.out.println("Digite o salário : ");
@@ -64,6 +65,33 @@ public class Empresa{
 		}
 	}
 
+	public void clientes(Clientes x){
+		cachaceiros.add(x);
+	}
+
+	public void cadastra_clientes(){
+		boolean fiado;
+		System.out.println("Nome do cliente:");
+		String cliente = scanf.next();
+		System.out.println("CPF do cliente (formato XXX.XXX.XXX-XX):");
+		String cpf = scanf.next();
+		System.out.println("Vender fiado?\n1--SIM\n0--NÃO");
+		if(scanf.nextInt() == 1)
+			fiado = true;
+		else
+			fiado = false;
+		Clientes x = new Clientes(cliente,cpf,fiado);
+		clientes(x);
+	}
+
+	public void ExibirClientes(){
+		int i = 1;
+		for(Clientes l: cachaceiros){
+			System.out.println("\n->>> "  +i+ "");
+			System.out.println(l);
+			i++;
+		}
+	}
 
 
 

@@ -14,5 +14,11 @@ public class Iniciar{
 		empresa.add_bebidas(y);
 		Bebida z = new Bebida("Cerveja Skol Lata",5.0,360,4.00,100);
 		empresa.add_bebidas(z);
+		Clientes j = new Clientes("Boca torta","097.323.467-99",true);
+		empresa.clientes(j);
+		Clientes k = new Clientes("João toma não paga","365.213.065-00",false);
+		empresa.clientes(k);
+		Clientes l = new Clientes("Pinguço","153.547.123-44",false);
+		empresa.clientes(l);
 	}
 }

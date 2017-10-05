@@ -17,6 +17,9 @@ public class Principal{
    		System.out.println("3--Exibir bebidas a venda");
    		System.out.println("4--Cadastrar novas bebidas");
    		System.out.println("5--Vender Bebida");
+   		System.out.println("6--Cadastrar novos clientes");
+   		System.out.println("7--Mostrar clientes");
+   		System.out.println("8--Comprar mais bebidas");
    		System.out.println("0--EXIT\n");
    		menu = scanf.nextInt();
    		return menu;
@@ -60,6 +63,20 @@ public class Principal{
 					break;
 				case 5:
 					bebida.vender(empresa);
+					getchar();
+					break;
+				case 6:
+					empresa.cadastra_clientes();
+					getchar();
+					break;
+				case 7:
+					empresa.ExibirClientes();
+					getchar();
+					break;
+				case 8:
+					bebida.comprar(empresa);
+					getchar();
+					break;
 				case 0:
 					break;
 				default:
